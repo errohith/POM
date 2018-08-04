@@ -11,7 +11,7 @@ public class TC008_DuplicateLead2 extends Annotations {
 	@BeforeTest
 	public void setValues() {
 		excelName = "CHANGES";//rOHITH
-		testCaseName = "duplicateLead";
+		testCaseName = "duplicateLead";//rohithkumar
 		testDescription = "DuplicateLead";
 		category = "Smoke";
 		author = "Rohith";
