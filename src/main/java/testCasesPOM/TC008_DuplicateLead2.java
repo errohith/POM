@@ -10,7 +10,7 @@ public class TC008_DuplicateLead2 extends Annotations {
 	
 	@BeforeTest
 	public void setValues() {
-		excelName = "DuplicateLead";
+		excelName = "CHANGES";//rOHITH
 		testCaseName = "duplicateLead";
 		testDescription = "DuplicateLead";
 		category = "Smoke";
