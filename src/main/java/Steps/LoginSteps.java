@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.But;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -81,6 +82,7 @@ public class LoginSteps {
 	public void ClickCreateLeadButton() {
 		driver.findElementByClassName("smallSubmit").click();
 	}
+	
 	@Then("Verify the First Name")
 	public void VerifyFirstName() {
 		WebElement Firstname = driver.findElementById("viewLead_firstName_sp");
@@ -96,8 +98,25 @@ public class LoginSteps {
 			System.out.println("Not Verifed");
 		}
 	}
+	@But("Verify Error Message")
+	public void erroeMessage(){
+		WebElement ErrorMessage = driver.findElementByClassName("errorMessage");
+		String Errormessage = ErrorMessage.getText();
+		System.out.println(Errormessage);
+		String ActualMsg ="The following required parameter is missing: [crmsfa.createLead.companyName]";
+		if (Errormessage.contains(ActualMsg))
+		{
+			System.out.println("Verfied");
+		}
+		else
+		{
+			System.out.println("Not Verifed");
+		}
+	}
+		
 	@And("Close the Browser")
 	public void close() {
 		driver.close();
 	}
+	
 }

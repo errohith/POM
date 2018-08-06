@@ -27,7 +27,7 @@ public class Annotations extends SeMethods {
 	}
 	@Parameters({ "url", "UName", "pwd" })
 	@BeforeMethod(/* groups = {"smoke","sanity","regression"} */)
-		public void login(String url, String UName, String pwd) {
+		public void loginFlow(String url, String UName, String pwd) {
 		
 		startApp("chrome", url);
 		WebElement eleUserName = locateElement("id", "username");

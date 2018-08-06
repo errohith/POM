@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import cucumber.api.java.en.Given;
 import wdMethods.Annotations;
 
 public class MyCreateLead extends Annotations {
@@ -29,12 +30,10 @@ public class MyCreateLead extends Annotations {
 	WebElement SourceDD;
 	
 	
-	
 //	public MyVerifyLead CreateLead(String cName,String fName,String lname,String ph) {
 		
 		
-	
-	public MyCreateLead companyname(String cName) {
+		public MyCreateLead companyname(String cName) {
 			type(companyName, cName);
 			return this;
 			
