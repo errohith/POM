@@ -3,26 +3,41 @@ package testCasesPOM;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import commonMethods.ProjectMethodsCommon;
 import pagesPOM.MyHomePage;
-import wdMethods.Annotations;
 
-public class TC005_DeleteLead extends Annotations {
+
+public class TC005_DeleteLead extends ProjectMethodsCommon {
 	
 	@BeforeTest
 	public void setValues() {
-		excelName = "DeleteLead";
+		
+		browserName = "chrome";
+		testCaseName = "DeleteLead Functionality";
+		testDescription = "Delete a created Lead";
+		testNodes = "Leads";
+		category = "smoke";
+		authors = "Rohith";
+		dataSheetName  = "DeleteLead";
+		
+		
+		/*excelName = "DeleteLead";
 		testCaseName = "deleteLead";
 		testDescription = "Delete To Leads";
 		category = "Smoke";
 		author = "Rohith";
-		moduleName = "Lead";
+		moduleName = "Lead";*/
 	}
 
 	@Test(dataProvider = "getData")
 	/* groups="smoke" */
-	public void deleteLead(String fname) throws Exception {
+	public void deleteLead(String Uname,String Pwd,String fname) throws Exception {
 		
 		new MyHomePage()
+		.typeUserName(Uname)
+		.typePassword(Pwd)
+		.clickLogin()
+		.ClickCrf()
 		.clickLeads()
 		.clickFindlead()
 		.FirstName(fname)

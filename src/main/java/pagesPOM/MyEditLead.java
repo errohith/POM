@@ -4,26 +4,29 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import wdMethods.Annotations;
+import commonMethods.ProjectMethodsCommon;
+import cucumber.api.java.en.And;
 
-public class MyEditLead extends Annotations {
+public class MyEditLead extends ProjectMethodsCommon {
 	
 	public MyEditLead() {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "updateLeadForm_companyName")
-	WebElement  Companyname;
+	@FindBy(id = "updateLeadForm_firstNameLocal")
+	WebElement  FlocalName;
 	
 	@FindBy(xpath = "(//input[@name='submitButton'])[1]")
 	WebElement  update;
 	
-	public MyEditLead companyname(String Cname) {
+	@And("Enter the localFirstName as (.*)")
+	public MyEditLead localname(String loname) {
 		
-		type(Companyname,Cname);
+		type(FlocalName,loname);
 		return this;
 	}
 	
+	@And("Click on Update button")
 public MyVerifyLead update() {
 		
 	click(update);

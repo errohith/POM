@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import wdMethods.Annotations;
+import commonMethods.ProjectMethodsCommon;
 
-public class MyMergetoSearch extends Annotations {
+public class MyMergetoSearch extends ProjectMethodsCommon {
 	
 	public MyMergetoSearch() {
 		PageFactory.initElements(driver, this);

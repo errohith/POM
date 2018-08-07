@@ -1,10 +1,10 @@
 package draggable;
-import wdMethods.*;
-
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import wdMethods.SeMethods;
 
 public class MouseHover extends SeMethods{
 

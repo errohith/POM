@@ -79,6 +79,10 @@ public class CreateLead {
 		driver.findElementById("createLeadForm_primaryEmail").sendKeys("errohith@gmail.com");
 		driver.findElementByClassName("smallSubmit").click();
 		WebElement Firstname = driver.findElementById("viewLead_firstName_sp");
+		WebElement Cname = driver.findElementById("viewLead_companyName_sp");
+		String Companyname = Cname.getText();
+		System.out.println(Companyname);
+		
 		String Name = Firstname.getText();
 		String Expected = "Rohith";
 

@@ -3,32 +3,46 @@ package testCasesPOM;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import commonMethods.ProjectMethodsCommon;
 import pagesPOM.MyHomePage;
-import wdMethods.Annotations;
 
-public class TC001_CreateLead extends Annotations {
+
+public class TC001_CreateLead extends ProjectMethodsCommon {
 	
 	@BeforeTest
 	public void setValues() {
-		excelName = "CreateLead";
+		
+		browserName = "chrome";
+		testCaseName = "CreateLead for TestLeaf";
+		testDescription = "Create Lead with Valid Values";
+		testNodes = "Leads";
+		category = "smoke";
+		authors = "Rohith";
+		dataSheetName  = "CreateLead";
+		
+		/*excelName = "CreateLead";
 		testCaseName = "createLead";
 		testDescription = "Create a new lead";
 		category = "Smoke";
 		author = "Rohith";
-		moduleName = "Lead";
+		moduleName = "Lead";*/
 	}
 
 	@Test(dataProvider = "getData")
 	/* groups="smoke" */
-	public void createLead(String cname, String Fname, String Lname, String PNo,String Value1) {
+	public void createLead(String Uname,String Pwd,String cname, String Fname, String Lname, String PNo) {
 		
 		new MyHomePage()
+		.typeUserName(Uname)
+		.typePassword(Pwd)
+		.clickLogin()
+		.ClickCrf()
 		.clickLeads()
 		.clickCreateLead()
 		.companyname(cname)
 		.firstName(Fname)
 		.lastName(Lname)
-		.SourceDD(Value1)
+		//.SourceDD(Value1)
 		.pNo(PNo)
 		.createSubmit()
 		.verfiyCreateLead(Fname);

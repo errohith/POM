@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]">
+  <test thread-count="5" verbose="5" name="Test(failed)">
     <classes>
-      <class name="GridScript.Leaftaps">
+      <class name="testCasesPOM.TC006_DuplicateLead">
         <methods>
-          <include name="login"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="duplicateLead"/>
+          <include name="afterSuite"/>
+          <include name="setValues"/>
         </methods>
-      </class> <!-- GridScript.Leaftaps -->
+      </class> <!-- testCasesPOM.TC006_DuplicateLead -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

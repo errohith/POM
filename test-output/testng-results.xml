@@ -2,16 +2,62 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16478" started-at="2018-08-04T10:37:05Z" finished-at="2018-08-04T10:37:22Z">
+  <suite name="Suite" duration-ms="24574" started-at="2018-08-07T16:42:04Z" finished-at="2018-08-07T16:42:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16478" started-at="2018-08-04T10:37:05Z" finished-at="2018-08-04T10:37:22Z">
-      <class name="GridScript.Leaftaps">
-        <test-method status="PASS" signature="login()[pri:0, instance:GridScript.Leaftaps@1b5cd00]" name="login" duration-ms="16447" started-at="2018-08-04T10:37:05Z" finished-at="2018-08-04T10:37:22Z">
+    <test name="Test" duration-ms="24574" started-at="2018-08-07T16:42:04Z" finished-at="2018-08-07T16:42:28Z">
+      <class name="testCasesPOM.TC006_DuplicateLead">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="beforeSuite" is-config="true" duration-ms="141" started-at="2018-08-07T16:42:04Z" finished-at="2018-08-07T16:42:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- GridScript.Leaftaps -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="setValues()[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="setValues" is-config="true" duration-ms="0" started-at="2018-08-07T16:42:04Z" finished-at="2018-08-07T16:42:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setValues -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-08-07T16:42:04Z" finished-at="2018-08-07T16:42:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="beforeMethod" is-config="true" duration-ms="5053" started-at="2018-08-07T16:42:04Z" finished-at="2018-08-07T16:42:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="duplicateLead(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="duplicateLead" duration-ms="18247" started-at="2018-08-07T16:42:09Z" data-provider="getData" finished-at="2018-08-07T16:42:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoSalesManager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[crmsfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rohithkumar]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Duplicate]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- duplicateLead -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="afterMethod" is-config="true" duration-ms="758" started-at="2018-08-07T16:42:28Z" finished-at="2018-08-07T16:42:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testCasesPOM.TC006_DuplicateLead@ac1102]" name="afterSuite" is-config="true" duration-ms="334" started-at="2018-08-07T16:42:28Z" finished-at="2018-08-07T16:42:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- testCasesPOM.TC006_DuplicateLead -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

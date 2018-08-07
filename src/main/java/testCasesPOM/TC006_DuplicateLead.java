@@ -3,26 +3,40 @@ package testCasesPOM;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import commonMethods.ProjectMethodsCommon;
 import pagesPOM.MyHomePage;
-import wdMethods.Annotations;
 
-public class TC006_DuplicateLead extends Annotations {
+public class TC006_DuplicateLead extends ProjectMethodsCommon {
 	
 	@BeforeTest
 	public void setValues() {
-		excelName = "DuplicateLead";
+		
+		browserName = "chrome";
+		testCaseName = "DuplicateLead Functionality";
+		testDescription = "DuplicateLead a created Lead";
+		testNodes = "Leads";
+		category = "smoke";
+		authors = "Rohith";
+		dataSheetName  = "DuplicateLead";
+		
+		
+	/*	excelName = "DuplicateLead";
 		testCaseName = "duplicateLead";
 		testDescription = "DuplicateLead";
 		category = "Smoke";
 		author = "Rohith";
-		moduleName = "Lead";
+		moduleName = "Lead";*/
 	}
 
 	@Test(dataProvider = "getData")
 	/* groups="smoke" */
-	public void duplicateLead(String fname,String cname) throws Exception {
+	public void duplicateLead(String Uname,String Pwd,String fname,String fname1) throws Exception {
 		
 		new MyHomePage()
+		.typeUserName(Uname)
+		.typePassword(Pwd)
+		.clickLogin()
+		.ClickCrf()
 		.clickLeads()
 		.clickFindlead()
 		.FirstName(fname)
@@ -30,9 +44,9 @@ public class TC006_DuplicateLead extends Annotations {
 		.sleep()
 		.Firstlink()
 		.Duplicate()
-		.companyname(cname)
+		.firstname(fname1)
 		.update()
-		.verfiyDuplicateLead(cname);
+		.verfiyDuplicateLead(fname1);
 		
 	}	
 		

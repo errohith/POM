@@ -2,9 +2,9 @@ package pagesPOM;
 
 import org.openqa.selenium.support.PageFactory;
 
-import wdMethods.Annotations;
+import commonMethods.ProjectMethodsCommon;
 
-public class MyLeads extends Annotations {
+public class MyLeads extends ProjectMethodsCommon {
 	
 	public MyLeads() {
 		PageFactory.initElements(driver, this);

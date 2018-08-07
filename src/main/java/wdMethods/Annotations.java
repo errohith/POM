@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
+
+import wdMethods.SeMethods;
 import excelLearning.ReadExcelCommon;
 
 public class Annotations extends SeMethods {
@@ -21,9 +23,10 @@ public class Annotations extends SeMethods {
 	}
 
 	@BeforeClass
-	public void startTest() {
+	public void startTest(String URL) {
 		startTest(testCaseName, testDescription);
 		startTestIteration(moduleName, author, category);
+		startApp("chrome",URL);
 	}
 	@Parameters({ "url", "UName", "pwd" })
 	@BeforeMethod(/* groups = {"smoke","sanity","regression"} */)
