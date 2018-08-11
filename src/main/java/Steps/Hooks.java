@@ -1,6 +1,5 @@
 package Steps;
 
-import cucumber.api.Result.Type;
 import wdMethods.SeMethods;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -12,11 +11,11 @@ public class Hooks extends SeMethods {
 	public void before(Scenario Sc)
 	{
 		beginResult();
-		startTest(Sc.getName(), Sc.getId());
-		startTestIteration(Sc.getName(),"Rohith","Smoke");
+		startTest(Sc.getClass().getName(), Sc.getClass().getTypeName());
+		startTestIteration(Sc.getClass().getName(),"Rohith","Smoke");
 		//String ScenarioName = Sc.getName();
 		//System.out.println(ScenarioName);
-		String RowId = Sc.getId();
+		String RowId = Sc.getClass().getName();
 		System.out.println(RowId);
 	}
 	@After
@@ -24,7 +23,7 @@ public class Hooks extends SeMethods {
 	{
 		
 		
-		Type TestCaseStatus = Sc.getStatus();
+		String TestCaseStatus = Sc.getStatus();
 		System.out.println(TestCaseStatus);
 		boolean FailedStatus = Sc.isFailed();
 		System.out.println(FailedStatus);

@@ -9,6 +9,5 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "./src/main/java/LearningCum", glue="Steps" , monochrome=true, tags = "@Smoke , @Sanity") //"@Sanity and @Smoke"
 
 public class RunCuckes {
-
 	
 }
