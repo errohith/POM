@@ -11,7 +11,7 @@ public class Hooks extends SeMethods {
 	public void before(Scenario Sc)
 	{
 		beginResult();
-		startTest(Sc.getClass().getName(), Sc.getClass().getTypeName());
+		startTest(Sc.getClass().getName(), Sc.getStatus());
 		startTestIteration(Sc.getClass().getName(),"Rohith","Smoke");
 		//String ScenarioName = Sc.getName();
 		//System.out.println(ScenarioName);
