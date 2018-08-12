@@ -10,8 +10,8 @@ public class Hook extends SeMethodsCommon{
 	@Before
 	public void before(Scenario sc) {
 		startResult();
-		startTestModule(sc.getClass().getName(), sc.getClass().getTypeName());
-		test = startTestCase(sc.getClass().getName());
+		startTestModule(sc.getName(), sc.getId());
+		test = startTestCase(sc.getName());
 		test.assignCategory("smoke");
 		test.assignAuthor("Rohith");
 		startApp("chrome");
