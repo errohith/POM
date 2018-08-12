@@ -1,4 +1,4 @@
-ackage Steps;
+package Steps;
 
 import cucumber.api.Result.Type;
 import wdMethods.SeMethods;
