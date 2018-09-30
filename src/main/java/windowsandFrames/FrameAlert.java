@@ -16,6 +16,8 @@ public class FrameAlert {
 		driver.manage().window().maximize();
 		WebElement FrameEle = driver.findElementById("iframeResult");
 		driver.switchTo().frame(FrameEle);
+		
+	
 		driver.findElementByXPath("//button[text()='Try it']").click();
 		Thread.sleep(3000);
 		Alert myAlert = driver.switchTo().alert();
